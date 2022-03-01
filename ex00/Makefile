@@ -9,8 +9,8 @@ uniq = $(if $1,$(firstword $1) $(call uniq,$(filter-out $(firstword $1),$1)))
 #############
 
 # TODO: fill in here
-NAME	:= program_name
-SRCS	:=
+NAME	:= a.out
+SRCS	:= ClapTrap.cpp main.cpp
 TEST_CPP:=
 
 CXX		:= c++
