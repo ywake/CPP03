@@ -6,12 +6,12 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 14:05:44 by ywake             #+#    #+#             */
-/*   Updated: 2022/03/01 16:21:52 by ywake            ###   ########.fr       */
+/*   Updated: 2022/03/06 03:13:40 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <string>
 
@@ -25,10 +25,19 @@ private:
   void _showStatus(void);
 
 public:
+  ClapTrap(void);
+  ClapTrap(const ClapTrap &copy);
   ClapTrap(std::string const &name);
   ~ClapTrap(void);
 
-  void attack(std::string const & target);
+  std::string getName() const;
+  unsigned int getHitPoint() const;
+  unsigned int getEnergyPoint() const;
+  unsigned int getAttackDamage() const;
+
+  ClapTrap &operator=(const ClapTrap &other);
+
+  void attack(std::string const &target);
   void takeDamage(unsigned int amount);
   void beRepaired(unsigned int amount);
 };
