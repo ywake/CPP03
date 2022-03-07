@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 16:37:13 by ywake             #+#    #+#             */
-/*   Updated: 2022/03/07 14:18:46 by ywake            ###   ########.fr       */
+/*   Updated: 2022/03/07 15:01:40 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ private:
 
 public:
   ScavTrap(void);
-  ScavTrap(ScavTrap const &copy);
+  // ScavTrap(ScavTrap const &copy);
   ScavTrap(std::string const &name);
   ~ScavTrap(void);
 

@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 16:36:28 by ywake             #+#    #+#             */
-/*   Updated: 2022/03/07 14:39:38 by ywake            ###   ########.fr       */
+/*   Updated: 2022/03/07 14:45:44 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void ScavTrap::_initialize()
 
 ScavTrap::ScavTrap(void) : ClapTrap("noname") { _initialize(); }
 
-ScavTrap::ScavTrap(ScavTrap const &copy)
-{
-  *this = copy;
-  std::cout << "[scav copy constructor] " << _name << std::endl;
-}
+// ScavTrap::ScavTrap(ScavTrap const &copy)
+// {
+//   *this = copy;
+//   std::cout << "[scav copy constructor] " << _name << std::endl;
+// }
 
 ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name) { _initialize(); }
 

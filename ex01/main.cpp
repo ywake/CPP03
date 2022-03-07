@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/28 13:38:15 by ywake             #+#    #+#             */
-/*   Updated: 2022/03/07 14:35:15 by ywake            ###   ########.fr       */
+/*   Updated: 2022/03/07 14:47:34 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,11 @@ int main(void)
   ScavTrap trapB;
   trapB = trapA;
   trapB.takeDamage(5);
+  trapB.guardGate();
 
   ScavTrap trapC(trapB);
-  trapB.takeDamage(5);
+  trapC.takeDamage(5);
+  trapC.guardGate();
 
   trapA.attack("Torneko");
 }
