@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 14:06:00 by ywake             #+#    #+#             */
-/*   Updated: 2022/03/07 14:30:56 by ywake            ###   ########.fr       */
+/*   Updated: 2022/03/27 13:57:38 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,14 @@
 ClapTrap::ClapTrap(void) :
     _name("NoName"), _hitPoint(10), _energyPoint(10), _attackDamage(0)
 {
+  std::cout << "[constructor] default" << std::endl;
 }
-ClapTrap::ClapTrap(const ClapTrap &copy) { *this = copy; }
+
+ClapTrap::ClapTrap(const ClapTrap &copy)
+{
+  std::cout << "[constructor] copy" << std::endl;
+  *this = copy;
+}
 
 ClapTrap::ClapTrap(std::string const &name) :
     _name(name), _hitPoint(10), _energyPoint(10), _attackDamage(0)
