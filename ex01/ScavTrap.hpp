@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 16:37:13 by ywake             #+#    #+#             */
-/*   Updated: 2022/03/07 15:01:40 by ywake            ###   ########.fr       */
+/*   Updated: 2022/03/27 18:09:56 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ public:
   ScavTrap(std::string const &name);
   ~ScavTrap(void);
 
+  void attack(std::string const &target);
   void guardGate();
 };
 
