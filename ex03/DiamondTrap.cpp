@@ -6,7 +6,7 @@
 /*   By: ywake <ywake@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 16:36:28 by ywake             #+#    #+#             */
-/*   Updated: 2022/03/07 17:12:33 by ywake            ###   ########.fr       */
+/*   Updated: 2022/03/29 16:54:49 by ywake            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ void DiamondTrap::_initialize()
 {
   std::cout << "[DiamondTrap constructor] " << this->DiamondTrap::_name
             << std::endl;
-  this->_hitPoint = FragTrap::_hitPoint;
+  this->_hitPoint = FragTrap::_hitPoint; // NEED FIX: This value was overwridden
+                                         // by ScavTrap::_attackDamage.
   this->_energyPoint = ScavTrap::_energyPoint;
-  this->_attackDamage = FragTrap::_attackDamage;
+  this->_attackDamage =
+      FragTrap::_attackDamage; // NEED FIX: This value was overwridden by
+                               // ScavTrap::_attackDamage.
 }
 
 DiamondTrap::DiamondTrap(void) : ClapTrap("noname_clap_name"), _name("noname")
